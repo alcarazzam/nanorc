@@ -1,0 +1,59 @@
+## Python
+
+syntax python "\.py$"
+header "^#!.*python"
+magic "Python script"
+linter pyflakes
+comment "#"
+
+# Function and class definitions.
+icolor brightblue "def [0-9A-Z_]+"
+icolor brightblue "class [0-9A-Z_]+"
+
+# Keywords.
+color brightcyan "\<(and|as|assert|async|await|break|class|continue)\>"
+color brightcyan "\<(def|del|elif|else|except|finally|for|from)\>"
+color brightcyan "\<(global|if|import|in|is|lambda|nonlocal|not|or)\>"
+color brightcyan "\<(pass|raise|return|try|while|with|yield)\>"
+color brightcyan "\<(breakpoint|int|float|bool|print)\>"
+
+color brightred "\<(BaseException|Exception|ArithmeticError|BufferError)\>"
+color brightred "\<(LookupError|AssertionError|AttributeError|EOFError)\>"
+color brightred "\<(GeneratorError|ImportError|ModuleNotFoundError)\>"
+color brightred "\<(IndexError|KeyError|KeyBoardInterrupt|MemoryError)\>"
+color brightred "\<(NameError|NotImplementedError|OSError|OverflowError)\>"
+color brightred "\<(RecursionError|ReferenceError|RuntimeError|StopIteration)\>"
+color brightred "\<(StopAsyncIteration|SyntaxError|IndentationError)\>"
+color brightred "\<(TabError|SystemError|SystemExit|TypeError)\>"
+color brightred "\<(UnboundLocalError|UnicodeError|UnicodeEncodeError)\>"
+color brightred "\<(UnicodeDecodeError|UnicodeTranslateError|ValueError)\>"
+color brightred "\<(ZeroDivisionError|EnvironmentError|IOError|WindowsError)\>"
+color brightred "\<(BlockingIOError|ChildProcessError|ConnectionError)\>"
+color brightred "\<(BrokenPipeError|ConnectionAbortedError|ConnectionRefusedError)\>"
+color brightred "\<(ConnectionResetError|FileExistsError|FileNotFoundError)\>"
+color brightred "\<(InterruptedError|IsADirectoryError|NotADirectoryError)\>"
+color brightred "\<(PermissionError|ProcessLookupError|TimeoutError)\>"
+
+color brightyellow "\<(Warning|UserWarning|DeprecationWarning|PendingDeprecationWarning)\>"
+color brightyellow "\<(SyntaxWarning|RuntimeWarning|FutureWarning|ImportWarning)\>"
+color brightyellow "\<(UnicodeWarning|BytesWarning|ResourceWarning)\>"
+
+# Special values.
+color brightmagenta "\<(False|None|True|NotImplemented)\>"
+
+color yellow "@[a-zA-Z]+"
+
+# Single-quoted strings.
+color brightgreen "'([^'\]|\\.)+'"
+color brightgreen ""([^"\]|\\.)+""
+# Comments.
+color brightred "(^|[[:blank:]])#.*"
+# Triple-quoted strings.
+color brightgreen    start="'''([^'),]|$)" end="(^|[^(\])'''"
+color brightgreen start="\"\"\"([^"),]|$)" end="(^|[^(\])\"\"\""
+
+# Reminders.
+color brightwhite,yellow "(FIXME|TODO|XXX)"
+
+# Trailing whitespace.
+#color ,green "[[:space:]]+$"
