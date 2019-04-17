@@ -19,7 +19,7 @@ color green "-(eq|ne|gt|lt|ge|le|ef|ot|nt)\>"
 color brightmagenta "[[:blank:]]-[A-Za-z]\>" "[[:blank:]]--[A-Za-z-]+\>"
 
 # Common commands.
-color brightblue "\<(awk|cat|cd|ch(grp|mod|own)|cp|cut|echo|env|grep|head|install|ln|make|mkdir|mv|popd|printf|pushd|rm|rmdir|sed|set|sort|tail|tar|touch|umask|unset)\>"
+color brightblue "\<(alias|awk|cat|cd|ch(grp|mod|own)|cp|cut|echo|env|grep|head|install|ln|make|mkdir|mv|popd|printf|pushd|rm|rmdir|sed|set|sort|source|tail|tar|touch|umask|unset)\>"
 color normal "[.-]tar\>"
 
 # Basic variable names (no braces).
