@@ -1,0 +1,25 @@
+## Markdown
+
+syntax markdown "(\.md|README)"
+
+# Titles
+color brightblue "^#+ .+"
+
+# Lists
+color cyan "(\*|-) "
+color cyan "[0-9]+\. "
+
+# Literals
+color red start="``" end="``"
+
+# Italic
+color blue,black start="(\*|_)" end="(\*|_)"
+
+# Bold
+color black,white start="(\*\*|__)" end="(\*\*|__)"
+
+# Links
+color brightblue "\[[^\[]+\]\([^\)]+\)"
+
+# Images
+color brightgreen "\!\[[^\[]+\]\([^\)]+\)"

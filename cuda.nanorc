@@ -39,4 +39,4 @@ color brightwhite,yellow "\<(FIXME|TODO|XXX)\>"
 ## CUDA
 color brightgreen "__(device|global|host|shared|constant)__"
 
-color brightgreen "\<(cudaMalloc|cudaMemcpy|cudaFree|__syncthreads)\>"
+color brightgreen "\<(gridDim|blockIdx|blockDim|blockDim|blockDim|<<<|>>>|dim3|char1|uchar1|char2|uchar2|char3|uchar3|char4|uchar4|short1|ushort1|short2|ushort2|short3|ushort3|short4|ushort4|int1|uint1|int2|uint2|int3|uint3|int4|uint4|long1|ulong1|long2|ulong2|long3|ulong3|long4|ulong4|float1|float2|float3|float4|double1|double2|cudaMalloc|cudaMemcpy|cudaFree|__syncthreads)\>"
