@@ -3,7 +3,7 @@
 syntax python "\.py$"
 header "^#!.*python"
 magic "Python script"
-linter pyflakes
+linter flake8
 comment "#"
 
 # Function and class definitions.
@@ -41,7 +41,7 @@ color brightyellow "\<(UnicodeWarning|BytesWarning|ResourceWarning)\>"
 # Special values.
 color brightmagenta "\<(False|None|True|NotImplemented)\>"
 
-color yellow "@[a-zA-Z]+"
+color yellow "@[a-zA-Z_]+"
 
 # Single-quoted strings.
 color brightgreen "'([^'\]|\\.)+'"
